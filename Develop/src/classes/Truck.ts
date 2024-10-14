@@ -46,7 +46,7 @@ class Truck extends Vehicle implements AbleToTow {
     this.towingCapacity = towingCapacity;
 
     if (wheels.length !== 4) {
-      this.wheels = [new Wheel(), new Wheel(), new Wheel(), new Wheel()];
+      this.wheels = [new Wheel(25,'GoodYear'), new Wheel(25,'GoodYear'), new Wheel(25,'GoodYear'), new Wheel(25,'GoodYear')];
     } else {
       this.wheels = wheels;
     };
@@ -75,6 +75,7 @@ class Truck extends Vehicle implements AbleToTow {
 
   override printDetails(): void {
     super.printDetails();
+    
     console.log(
       `VIN: ${this.vin}
        COLOR: ${this.color}
@@ -84,7 +85,21 @@ class Truck extends Vehicle implements AbleToTow {
        WEIGHT: ${this.weight}
        TOP SPEED: ${this.topSpeed}
        TOWING CAPACITY: ${this.towingCapacity}
-       Wheels: ${this.wheels}`
+       Wheels: ${this.wheels.length}`
+    );
+
+    // Print details of the wheels
+    console.log(
+      `Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`
+    );
+    console.log(
+      `Wheel 2: ${this.wheels[1].getDiameter} inch with a ${this.wheels[1].getTireBrand} tire`
+    );
+    console.log(
+      `Wheel 3: ${this.wheels[2].getDiameter} inch with a ${this.wheels[2].getTireBrand} tire`
+    );
+    console.log(
+      `Wheel 4: ${this.wheels[3].getDiameter} inch with a ${this.wheels[3].getTireBrand} tire`
     );
   }
 
