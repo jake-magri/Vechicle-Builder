@@ -27,7 +27,7 @@ class Motorbike extends Vehicle {
     year: number,
     weight: number,
     topSpeed: number,
-    wheels: Wheel[]
+    wheels: Wheel[]= [new Wheel(), new Wheel()]
   ) {
     super()
 
@@ -38,10 +38,10 @@ class Motorbike extends Vehicle {
     this.year = year;
     this.weight = weight;
     this.topSpeed = topSpeed;
-    this.wheels = wheels;
-
     if (wheels.length !== 2) {
-      this.wheels = Array(2).fill(new Wheel());
+      this.wheels = [new Wheel(), new Wheel()]
+    } else {
+      this.wheels = wheels;
     }
   }
   // TODO: Implement the wheelie method
