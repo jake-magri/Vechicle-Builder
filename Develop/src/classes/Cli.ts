@@ -10,12 +10,12 @@ class Cli {
   // DONE: update the vehicles property to accept Truck and Motorbike objects as well
   // DONE: You will need to use the Union operator to define additional types for the array
   // DONE: See the AbleToTow interface for an example of how to use the Union operator
-  vehicles: Car[] | Truck[] | Motorbike[];
+  vehicles: (Car | Truck | Motorbike)[];
   selectedVehicleVin: string | undefined;
   exit: boolean = false;
 
   // DONE: Update the constructor to accept Truck and Motorbike objects as well
-  constructor(vehicles: Car[] | Truck[] | Motorbike[]) {
+  constructor(vehicles: (Car | Truck | Motorbike)[]) {
     this.vehicles = vehicles;
   }
 
@@ -68,8 +68,13 @@ class Cli {
         if (answers.vehicleType === 'Car') {
           // create a car
           this.createCar();
+        } else if (answers.vehicleType === 'Truck') {
+          // DONE: add statements to create a truck or motorbike if the user selects the respective vehicle type
+          this.createTruck;
+        } else if (answers.vehicleType === 'Motorbike'){
+          this.createMotorbike;
         }
-        // TODO: add statements to create a truck or motorbike if the user selects the respective vehicle type
+        
       });
   }
 
@@ -110,7 +115,8 @@ class Cli {
       ])
       .then((answers) => {
         const car = new Car(
-          // TODO: The generateVin method is static and should be called using the class name Cli, make sure to use Cli.generateVin() for creating a truck and motorbike as well!
+          // TODO: The generateVin method is static and should be called using the class name Cli, 
+          // make sure to use Cli.generateVin() for creating a truck and motorbike as well!
           Cli.generateVin(),
           answers.color,
           answers.make,
