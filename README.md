@@ -32,13 +32,17 @@ When prompted, choose whether to create a new vehicle or select an existing vehi
 Choose from Car, Truck, or Motorbike. Enter the required properties such as color, make, model, year, weight, and top speed. For Truck, you'll also need to specify towing capacity. For Motorbike, provide details about the front and rear wheels.
 #### Performing Actions on Vehicles:
 After selecting a vehicle, choose from the following actions: 
-Print details: View the details of the selected vehicle. 
-Start vehicle: Start the vehicle's engine. 
-Accelerate 5 MPH / Decelerate 5 MPH: Adjust the vehicle's speed. Stop vehicle: Bring the vehicle to a halt. 
-Turn right / Turn left: Turn the vehicle in the specified direction. 
-Reverse: Move the vehicle backward. Wheelie: (Motorbike only) Perform a wheelie. 
-Tow: (Truck only) Tow another vehicle. Select or create another vehicle: Return to the main menu to select a different vehicle or create a new one. 
-Exit: Close the application.
+
+- Print details: View the details of the selected vehicle. 
+- Start vehicle: Start the vehicle's engine. 
+- Accelerate 5 MPH / Decelerate 5 MPH: Adjust the vehicle's speed. 
+- Stop vehicle: Bring the vehicle to a halt. 
+- Turn right / Turn left: Turn the vehicle in the specified direction. 
+- Reverse: Move the vehicle backward. 
+- Wheelie: (Motorbike only) Perform a wheelie. 
+- Tow: (Truck only) Tow another vehicle. 
+- Select or create another vehicle: Return to the main menu to select a different vehicle or create a new one. 
+- Exit: Close the application.
 
 ## How to Contribute
 
