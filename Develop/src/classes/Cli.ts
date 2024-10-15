@@ -3,6 +3,7 @@ import inquirer from "inquirer";
 import Truck from "./Truck.js";
 import Car from "./Car.js";
 import Motorbike from "./Motorbike.js";
+import Wheel from "./Wheel.js";
 
 // define the Cli class
 class Cli {
@@ -249,6 +250,12 @@ class Cli {
         },
       ])
       .then((answers) => {
+        // Push Wheel properties to wheel array
+        const frontWheel = new Wheel(answers.frontWheelDiameter, answers.frontWheelBrand);
+        const rearWheel = new Wheel(answers.rearWheelDiameter,
+        answers.rearWheelBrand)
+        const wheelsAnswersArray = [frontWheel,rearWheel];
+        
         // Call motorbike constructor to create new motorbike
 
         const motorbike = new Motorbike(
@@ -258,7 +265,8 @@ class Cli {
           answers.model,
           answers.year,
           answers.weight,
-          answers.topSpeed
+          answers.topSpeed,
+          wheelsAnswersArray
         );
         // push newly created motorbike to vehicles array
         this.vehicles.push(motorbike);
