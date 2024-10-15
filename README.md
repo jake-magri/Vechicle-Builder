@@ -21,7 +21,8 @@ Clone the repository to your local device. Run 'npm install' to get dependencies
 ## Usage
 
 ### Video Demo
-![Video demo of application.](assets/videos/vehicleBuilderDemo.mp4)
+
+https://github.com/user-attachments/assets/670d7471-842b-4765-a167-1ad2ce9797e9
 
 ### Usage Information
 After installing the dependencies and starting the application, you can use the Vehicle-Builder CLI to create and manage vehicles directly from the command line. 
