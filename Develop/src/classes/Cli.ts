@@ -37,14 +37,14 @@ class Cli {
             return {
               //Displays the names of the choices and pairs the value with the vehicle.vin - key value
               name: `${vehicle.vin} -- ${vehicle.make} ${vehicle.model}`,
-              value: vehicle.vin,
+              value: vehicle.vin
             };
           }),
         },
       ])
       .then((answers) => {
         // set the selectedVehicleVin to the vin of the selected vehicle
-        this.selectedVehicleVin = answers.vin;
+        this.selectedVehicleVin = answers.selectedVehicleVin;
         // perform actions on the selected vehicle
         this.performActions();
       });
@@ -331,7 +331,6 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
               this.vehicles[i].printDetails();
-              this.performActions();
             }
           }
         } else if (answers.action === 'Start vehicle') {
@@ -339,7 +338,6 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
               this.vehicles[i].start();
-              this.performActions();
             }
           }
         } else if (answers.action === 'Accelerate 5 MPH') {
@@ -347,7 +345,6 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
               this.vehicles[i].accelerate(5);
-              this.performActions();
             }
           }
         } else if (answers.action === 'Decelerate 5 MPH') {
@@ -355,7 +352,6 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
               this.vehicles[i].decelerate(5);
-              this.performActions();
             }
           }
         } else if (answers.action === 'Stop vehicle') {
@@ -363,7 +359,6 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
               this.vehicles[i].stop();
-              this.performActions();
             }
           }
         } else if (answers.action === 'Turn right') {
@@ -371,7 +366,6 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
               this.vehicles[i].turn('right');
-              this.performActions();
             }
           }
         } else if (answers.action === 'Turn left') {
@@ -379,7 +373,6 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
               this.vehicles[i].turn('left');
-              this.performActions();
             }
           }
         } else if (answers.action === 'Reverse') {
@@ -387,7 +380,6 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
               this.vehicles[i].reverse();
-              this.performActions();
             }
           }
         } else if (answers.action === 'Wheelie') {
