@@ -406,9 +406,13 @@ class Cli {
               if (selectedVehicle instanceof Truck) {
               //  Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument.
                 this.findVehicleToTow(selectedVehicle);
-              // return to prevent function running asyncrynously with performActions()
                 return;
-              }
+              // return to prevent function running asyncrynously with performActions()
+              } else {
+                console.log("The selected vehicle is not a truck and cannot tow other vehicles.")
+                this.performActions();
+                return
+              } 
             }
           }
         }
