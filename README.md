@@ -31,7 +31,8 @@ When prompted, choose whether to create a new vehicle or select an existing vehi
 #### Creating a Vehicle: 
 Choose from Car, Truck, or Motorbike. Enter the required properties such as color, make, model, year, weight, and top speed. For Truck, you'll also need to specify towing capacity. For Motorbike, provide details about the front and rear wheels.
 #### Performing Actions on Vehicles:
-After selecting a vehicle, choose from the following actions: Print details: View the details of the selected vehicle. 
+After selecting a vehicle, choose from the following actions: 
+Print details: View the details of the selected vehicle. 
 Start vehicle: Start the vehicle's engine. 
 Accelerate 5 MPH / Decelerate 5 MPH: Adjust the vehicle's speed. Stop vehicle: Bring the vehicle to a halt. 
 Turn right / Turn left: Turn the vehicle in the specified direction. 
