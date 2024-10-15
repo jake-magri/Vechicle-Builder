@@ -46,7 +46,7 @@ After selecting a vehicle, choose from the following actions:
 
 ## How to Contribute
 
-Contribute freely! Please create an associated issue in the github project management tool and assign youself.
+Contribute freely! Please create an associated issue in the github project management tool and assign yourself.
 
 ## Tests
 
